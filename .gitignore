@@ -57,3 +57,5 @@ editor/.lsp/sqlite.db
 #build_external
 /packages/bullet-2.77/
 /packages/lib/
+/.internal
+/build
