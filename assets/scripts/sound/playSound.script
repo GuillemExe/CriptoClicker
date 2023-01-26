@@ -1,8 +1,8 @@
-local sound = require "sound"
 
 
 function init(self)
-	sound.play("Music#sound", {delay = 1, gain = 0.5, pan = -1.0, speed = 1.25})
+	--sound.play("/Music#sound")
+	sound.play("/Music#sound", {delay = 0, gain = 0.5, pan = -1.0, speed = 1})
 end
 
 function final(self)
