@@ -14,11 +14,3 @@ input_method = HiddenInputField
 [project]
 title = CriptoClicker
 
-[sound]
-max_sound_buffers = 2048
-max_sound_sources = 2048
-max_component_count = 2048
-max_sound_data = 2048
-use_thread = 1
-max_sound_instances = 2048
-

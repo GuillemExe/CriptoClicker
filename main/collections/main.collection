@@ -144,7 +144,7 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sound\"\n"
   "  type: \"sound\"\n"
-  "  data: \"sound: \\\"/assets/sounds/windows95/notificationAux.ogg\\\"\\n"
+  "  data: \"sound: \\\"/assets/sounds/windows95/startGame.ogg\\\"\\n"
   "looping: 0\\n"
   "group: \\\"master\\\"\\n"
   "gain: 0.5\\n"
