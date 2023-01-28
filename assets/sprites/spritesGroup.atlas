@@ -1,5 +1,9 @@
 images {
   image: "/assets/sprites/background/backgroundColorScreen.jpg"
+  sprite_trim_mode: SPRITE_TRIM_MODE_4
+}
+images {
+  image: "/assets/sprites/icons/myPCIcon.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0

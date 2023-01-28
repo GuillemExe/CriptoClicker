@@ -1,0 +1,55 @@
+local icons = {}
+local icon_amount = 0
+--Extra Score
+local extra_click_time
+local current_time
+
+go.property("extra_clicks", 5)
+
+function init(self)
+	self.extra_click_time = 3
+	self.current_time = 0
+	Spawn(self, 1)
+end
+
+function add_extra_clicks(self)
+	--local total_clicks = icon_amount * self.extra_clicks
+	--msg.post("ui#main", "add_extra_clicks", { extra_clicks = total_clicks })
+end
+
+function update(self, dt)
+	self.current_time = self.current_time + dt
+
+	if self.current_time >= self.extra_click_time then
+		self.current_time = 0
+		add_extra_clicks(self)
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("spawn_number") then
+		Spawn(self, message.number)
+	end
+end
+
+
+function Spawn(self, number_to_spawn)
+	-- Randomize
+	math.randomseed(os.time())
+
+	local gameWidth = tonumber(sys.get_config("display.width"))
+	local gameHeight = tonumber(sys.get_config("display.height"))
+
+	-- Spawn 
+	for i = 1, number_to_spawn do
+
+		self.id = tostring(i)
+
+		local x1 = math.random(100, gameWidth-100)
+		local y1 = math.random(100, gameHeight-100)
+		local pos = vmath.vector3(x1, y1, 0)
+
+		local icon = factory.create("#factory", pos, nil, {}, 1)	
+		icon_amount = icon_amount + 1
+	end	
+end
