@@ -3,43 +3,42 @@ local max_fill_angle = 360
 local last_spawn_score = 0
 
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	local pie_node = gui.get_node("pie")
+	gui.set_fill_angle(pie_node, 0)
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+	if message_id == hash("add_click") then
+		score = score + 1
+		--gui.set_text(gui.get_node("clicks"), self.score)	
+		update_score(self)
+	end
+	if message_id == hash("add_extra_clicks") then
+		score = score + message.extra_clicks
+		update_score(self)
+	end
+
 end
 
-function on_input(self, action_id, action)
-	-- Add input-handling code here. The game object this script is attached to
-	-- must have acquired input focus:
-	--
-	--    msg.post(".", "acquire_input_focus")
-	--
-	-- All mapped input bindings will be received. Mouse and touch input will
-	-- be received regardless of where on the screen it happened.
-	-- Learn more: https://defold.com/manuals/input/
-	-- Remove this function if not needed
-end
+function update_score(self)
+	gui.set_text(gui.get_node("clicks"), score)	
 
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
+	if score >= last_spawn_score + 10 then
+		local icons_to_spawn = math.floor((score - last_spawn_score)/10)
+		msg.post("Generators#spawnIcons", "spawn_number", { number = icons_to_spawn })
+		--msg.post("iconSpawner#spawnIcons", "Spawn")
+		--print("LastSpawn: ", last_spawn_score)
+		--print("Current: ", score)
+		--print("Diff: ", icons_to_spawn)
+		last_spawn_score = score
+	end
+
+	if score > 10 then
+		gui.set_fill_angle(gui.get_node("pie"), score%10*max_fill_angle/10)
+	else
+		gui.set_fill_angle(gui.get_node("pie"), score*max_fill_angle/10)
+	end
+	if score%10 == 0 then
+		gui.set_fill_angle(gui.get_node("pie"), 360)
+	end
 end

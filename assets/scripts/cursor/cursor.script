@@ -79,7 +79,7 @@ function on_input(self, action_id, action)
 
 			-- Reset the scale to 1.0 on Selected GameObject when released
 			local s1 = vmath.vector3(1.0, 1.0, 1.0)
-			--go.set_scale(s1, self.collision_id)
+			go.set_scale(s1, self.collision_id)
 		end
 
 		-- Upon a Click/Touch -- if the cursor has collided with another GameObject and
@@ -92,7 +92,7 @@ function on_input(self, action_id, action)
 
 			-- Increase Scale for selected GameObject when selected
 			local s2 = vmath.vector3(1.2, 1.2, 1.0)
-			--go.set_scale(s2, self.collision_id)
+			go.set_scale(s2, self.collision_id)
 		end
 
 		-- Set self.dragging to true if user has clicked a GameObject and moves it
