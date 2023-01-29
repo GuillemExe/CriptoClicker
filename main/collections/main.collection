@@ -51,7 +51,24 @@ embedded_instances {
   id: "UI"
   children: "Info"
   children: "PauseMenu"
-  data: ""
+  data: "components {\n"
+  "  id: \"windowSmall\"\n"
+  "  component: \"/main/gui/windowSmall.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 0.0
     y: 0.0
@@ -90,10 +107,10 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "Info"
+  id: "Generators"
   data: "components {\n"
-  "  id: \"homeScreen\"\n"
-  "  component: \"/main/gui/homeScreen.gui\"\n"
+  "  id: \"spawnPCs\"\n"
+  "  component: \"/assets/scripts/spawner/spawnPCs.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -108,28 +125,25 @@ embedded_instances {
   "  property_decls {\n"
   "  }\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/assets/prefabs/myPC.go\\\"\\n"
+  "load_dynamically: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
   ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "Generators"
-  children: "PCSpawner"
-  data: ""
   position {
     x: 0.0
     y: 0.0
@@ -171,7 +185,30 @@ embedded_instances {
   id: "Music"
   children: "turningOnTheComputer"
   children: "windowsStartup"
-  data: ""
+  data: "embedded_components {\n"
+  "  id: \"clickSound\"\n"
+  "  type: \"sound\"\n"
+  "  data: \"sound: \\\"/assets/sounds/physical/oneClick.ogg\\\"\\n"
+  "looping: 0\\n"
+  "group: \\\"master\\\"\\n"
+  "gain: 1.0\\n"
+  "pan: 0.0\\n"
+  "speed: 1.0\\n"
+  "loopcount: 0\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
     x: 0.0
     y: 0.0
@@ -393,46 +430,11 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "PCSpawner"
-  data: "components {\n"
-  "  id: \"spawnPCs\"\n"
-  "  component: \"/assets/scripts/spawner/spawnPCs.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"factory\"\n"
-  "  type: \"factory\"\n"
-  "  data: \"prototype: \\\"/assets/prefabs/myPC.go\\\"\\n"
-  "load_dynamically: false\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
+  id: "Info"
+  data: ""
   position {
     x: 0.0
-    y: 0.0
+    y: 451.0
     z: 0.0
   }
   rotation {

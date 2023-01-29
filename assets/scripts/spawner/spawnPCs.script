@@ -13,8 +13,8 @@ function init(self)
 end
 
 function add_extra_clicks(self)
-	--local total_clicks = icon_amount * self.extra_clicks
-	--msg.post("ui#main", "add_extra_clicks", { extra_clicks = total_clicks })
+	local total_clicks = icon_amount * self.extra_clicks
+	msg.post("UI#windowSmall", "add_extra_clicks", { extra_clicks = total_clicks })
 end
 
 function update(self, dt)
@@ -47,7 +47,7 @@ function Spawn(self, number_to_spawn)
 
 		local x1 = math.random(100, gameWidth-100)
 		local y1 = math.random(100, gameHeight-100)
-		local pos = vmath.vector3(x1, y1, 0)
+		local pos = vmath.vector3(x1, y1, 1)
 
 		local icon = factory.create("#factory", pos, nil, {}, 1)	
 		icon_amount = icon_amount + 1

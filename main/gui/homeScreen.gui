@@ -48,8 +48,8 @@ nodes {
 }
 nodes {
   position {
-    x: 0.0
-    y: 0.0
+    x: 114.0
+    y: 592.0
     z: 0.0
     w: 1.0
   }
@@ -106,8 +106,8 @@ nodes {
 }
 nodes {
   position {
-    x: -0.5
-    y: 0.5
+    x: 113.5
+    y: 592.5
     z: 0.0
     w: 1.0
   }
@@ -164,8 +164,8 @@ nodes {
 }
 nodes {
   position {
-    x: -0.5
-    y: 0.5
+    x: 113.5
+    y: 592.5
     z: 0.0
     w: 1.0
   }
@@ -222,8 +222,8 @@ nodes {
 }
 nodes {
   position {
-    x: 0.0
-    y: 0.0
+    x: 114.0
+    y: 592.0
     z: 0.0
     w: 1.0
   }
@@ -280,8 +280,8 @@ nodes {
 }
 nodes {
   position {
-    x: 0.0
-    y: 0.0
+    x: 10.0
+    y: 4.0
     z: 0.0
     w: 1.0
   }
@@ -313,7 +313,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "0"
   font: "system_font"
-  id: "template/text"
+  id: "template/clicks"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -346,8 +346,8 @@ nodes {
 }
 nodes {
   position {
-    x: -74.0
-    y: 0.0
+    x: -64.0
+    y: 4.0
     z: 0.0
     w: 1.0
   }
@@ -404,8 +404,8 @@ nodes {
 }
 nodes {
   position {
-    x: 768.0
-    y: 0.0
+    x: 882.0
+    y: 592.0
     z: 0.0
     w: 1.0
   }
