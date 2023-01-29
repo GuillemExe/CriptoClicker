@@ -5,9 +5,9 @@ local extra_click_time
 local current_time
 
 go.property("extra_clicks", 5)
+go.property("extra_click_time", 3)
 
 function init(self)
-	self.extra_click_time = 3
 	self.current_time = 0
 	Spawn(self, 1)
 end

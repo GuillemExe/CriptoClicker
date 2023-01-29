@@ -9,12 +9,11 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("add_click") then
-		score = score + 1
+		score = score + message.number
 		--gui.set_text(gui.get_node("clicks"), self.score)	
 		update_score(self)
 	end
 	if message_id == hash("add_extra_clicks") then
-		print("HI")
 		score = score + message.extra_clicks
 		update_score(self)
 	end
