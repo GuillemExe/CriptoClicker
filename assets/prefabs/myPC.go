@@ -64,8 +64,8 @@ embedded_components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/assets/sprites/spritesGroup.atlas\"\n"
-  "default_animation: \"myPCIcon\"\n"
+  data: "tile_set: \"/assets/sprites/Coin.atlas\"\n"
+  "default_animation: \"Coin rotate\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
@@ -79,5 +79,10 @@ embedded_components {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+    z: 1.0
   }
 }
