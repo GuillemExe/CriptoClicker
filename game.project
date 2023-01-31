@@ -1,16 +1,18 @@
 [bootstrap]
-main_collection = /main/collections/main.collectionc
+main_collection = /main/collections/controller.collectionc
+render = /assets/renderer/cryptoclickercustomrenderer.renderc
 
 [script]
 shared_state = 1
 
 [display]
-width = 960
-height = 640
+width = 1920
+height = 1080
 high_dpi = 1
 vsync = 0
 samples = 60
 display_device_info = 1
+fullscreen = 1
 
 [android]
 input_method = HiddenInputField
