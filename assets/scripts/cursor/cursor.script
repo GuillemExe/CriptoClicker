@@ -49,7 +49,7 @@ end
 function on_input(self, action_id, action)
 
 	-- Quit Game
-	if action_id == hash("quit_game") then
+	if action_id == hash("quit") then
 		msg.post("@system:", "exit", {code = 0})
 	end
 
