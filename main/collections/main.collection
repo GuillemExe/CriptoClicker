@@ -18,8 +18,8 @@ embedded_instances {
   "size_mode: SIZE_MODE_MANUAL\\n"
   "\"\n"
   "  position {\n"
-  "    x: 600.0\n"
-  "    y: 600.0\n"
+  "    x: 960.0\n"
+  "    y: 540.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -27,6 +27,11 @@ embedded_instances {
   "    y: 0.0\n"
   "    z: 0.0\n"
   "    w: 1.0\n"
+  "  }\n"
+  "  scale {\n"
+  "    x: 2.0\n"
+  "    y: 1.0\n"
+  "    z: 1.0\n"
   "  }\n"
   "}\n"
   ""
@@ -70,8 +75,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 0.0
-    y: 0.0
+    x: 17.0
+    y: 410.0
     z: 0.0
   }
   rotation {

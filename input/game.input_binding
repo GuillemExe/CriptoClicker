@@ -1,9 +1,5 @@
 key_trigger {
   input: KEY_ESC
-  action: "quit"
-}
-key_trigger {
-  input: KEY_SPACE
   action: "enableMenu"
 }
 mouse_trigger {
