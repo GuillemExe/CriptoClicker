@@ -4,7 +4,7 @@ local icon_amount = 0
 local extra_click_time
 local current_time
 
-go.property("extra_clicks", 5)
+go.property("extra_clicks", 2)
 go.property("extra_click_time", 3)
 
 function init(self)
