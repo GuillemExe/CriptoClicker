@@ -1,0 +1,63 @@
+local background_node = nil
+local keep_playing_button_node = nil
+local quit_button_node = nil
+
+function init(self)
+	-- Add initialization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+	background_node = gui.get_node("ingamemenubackground")
+	keep_playing_button_node = gui.get_node("playconfirm")
+	quit_button_node = gui.get_node("quitconfirm")
+	
+	gui.set_enabled(background_node, false)
+	gui.set_enabled(keep_playing_button_node, false)
+	gui.set_enabled(quit_button_node, false)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here. The game object this script is attached to
+	-- must have acquired input focus:
+	--
+	--    msg.post(".", "acquire_input_focus")
+	--
+	-- All mapped input bindings will be received. Mouse and touch input will
+	-- be received regardless of where on the screen it happened.
+	-- Learn more: https://defold.com/manuals/input/
+	-- Remove this function if not needed
+	if action_id == hash("enableMenu") and action.released then
+		gui.set_enabled(background_node, true)
+		gui.set_enabled(keep_playing_button_node, true)
+		gui.set_enabled(quit_button_node, true)
+	end
+		
+	
+	if action_id == hash("touch") and action.released then
+		if gui.pick_node(gui.get_node("playconfirm"), action.x, action.y) and gui.is_enabled(keep_playing_button_node) then
+			gui.set_enabled(background_node, false)
+			gui.set_enabled(keep_playing_button_node, false)
+			gui.set_enabled(quit_button_node, false)
+		elseif gui.pick_node(gui.get_node("quitconfirm"), action.x, action.y) and gui.is_enabled(quit_button_node) then
+			msg.post("loader:/controller", "show_menu")
+		end
+	end
+end
