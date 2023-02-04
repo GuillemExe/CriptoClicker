@@ -99,8 +99,8 @@ embedded_instances {
   "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/assets/sprites/menu.atlas\\\"\\n"
-  "default_animation: \\\"crypto-clicker-cursor\\\"\\n"
+  "  data: \"tile_set: \\\"/assets/sprites/spritesGroup.atlas\\\"\\n"
+  "default_animation: \\\"MousePointer\\\"\\n"
   "material: \\\"/assets/material/cursor.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
@@ -129,8 +129,8 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 0.24
-    y: 0.24
+    x: 1.0
+    y: 1.0
     z: 1.0
   }
 }

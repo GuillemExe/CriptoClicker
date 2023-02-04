@@ -4,6 +4,7 @@ function init(self)
 	-- Remove this function if not needed
 	msg.post(".", "acquire_input_focus")
 	self.position = vmath.vector3(0,0,0)
+	print(go.get("#sprite", "size"))
 end
 
 function final(self)
@@ -16,7 +17,15 @@ function update(self, dt, action)
 	-- Add update code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
-	go.set_position(self.position)
+	local mouseWidth = go.get("#sprite", "size.x")
+	local mouseHeight = go.get("#sprite", "size.y")
+
+	local xValueInUnits = math.floor(self.position.x + mouseWidth/2)
+	local yValueInUnits = math.floor(self.position.y - mouseHeight/2)
+	
+	local desiredPosition = vmath.vector3(xValueInUnits, yValueInUnits, 0)
+	
+	go.set_position(desiredPosition)
 end
 
 function fixed_update(self, dt)
