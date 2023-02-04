@@ -12,7 +12,7 @@ high_dpi = 1
 vsync = 0
 samples = 60
 display_device_info = 1
-fullscreen = 0
+fullscreen = 1
 
 [android]
 input_method = HiddenInputField
