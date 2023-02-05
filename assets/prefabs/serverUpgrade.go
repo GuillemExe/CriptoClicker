@@ -1,3 +1,28 @@
+components {
+  id: "upgrade"
+  component: "/assets/scripts/controller/upgrade.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  properties {
+    id: "upgrade_cost"
+    value: "5.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+  properties {
+    id: "is_computer"
+    value: "0.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+}
 embedded_components {
   id: "sprite"
   type: "sprite"
@@ -52,7 +77,7 @@ embedded_components {
   "line_break: false\n"
   "text: \"Add New Server\\n"
   "\"\n"
-  "  \"Cost 1000\"\n"
+  "  \"Cost 10000\"\n"
   "font: \"/assets/font/m5x7.font\"\n"
   "material: \"/builtins/fonts/label.material\"\n"
   ""

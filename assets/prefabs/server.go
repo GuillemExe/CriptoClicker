@@ -1,3 +1,23 @@
+components {
+  id: "modifierLabel"
+  component: "/assets/scripts/controller/modifierLabel.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  properties {
+    id: "is_computer"
+    value: "0.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+}
 embedded_components {
   id: "sprite"
   type: "sprite"

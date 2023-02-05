@@ -17,7 +17,24 @@ function on_message(self, message_id, message, sender)
 		score = score + message.extra_clicks
 		update_score(self)
 	end
-
+	if message_id == hash("add_computer") then
+		local device_cost = message.upgrade_cost
+		if score >= device_cost then
+			score = score - device_cost
+			print("Comprar ordenador")
+			msg.post("/computers#modifierLabel", "confirm_add_device")
+			update_score(self)
+		end
+	end
+	if message_id == hash("add_server") then
+		local device_cost = message.upgrade_cost
+		if score >= device_cost then
+			score = score - device_cost
+			print("Comprar server")
+			msg.post("/server#modifierLabel", "confirm_add_device")
+			update_score(self)
+		end
+	end
 end
 
 function update_score(self)
