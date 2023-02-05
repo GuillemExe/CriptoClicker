@@ -13,6 +13,11 @@ components {
     w: 1.0
   }
   properties {
+    id: "duration"
+    value: "15.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+  properties {
     id: "is_computer"
     value: "0.0"
     type: PROPERTY_TYPE_NUMBER

@@ -12,6 +12,16 @@ components {
     z: 0.0
     w: 1.0
   }
+  properties {
+    id: "duration"
+    value: "30.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+  properties {
+    id: "coins_generated_per_turn"
+    value: "10.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
 }
 embedded_components {
   id: "sprite"
