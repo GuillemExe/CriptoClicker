@@ -14,7 +14,7 @@ components {
   }
   properties {
     id: "upgrade_cost"
-    value: "5.0"
+    value: "1000.0"
     type: PROPERTY_TYPE_NUMBER
   }
   properties {

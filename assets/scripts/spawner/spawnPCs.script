@@ -40,16 +40,22 @@ function Spawn(self, number_to_spawn)
 	local gameWidth = tonumber(sys.get_config("display.width"))
 	local gameHeight = tonumber(sys.get_config("display.height"))
 
-	-- Spawn 
-	for i = 1, number_to_spawn do
+	-- Spawn
+	if icon_amount < 9 then
+		for i = 1, number_to_spawn do
 
-		self.id = tostring(i)
+			self.id = tostring(i)
 
-		local x1 = math.random(100, gameWidth-100)
-		local y1 = math.random(100, gameHeight-100)
-		local pos = vmath.vector3(x1, y1, 1)
+			local windowsPosition = go.get_position("desktop#sprite")
 
-		local icon = factory.create("#factory", pos, nil, {}, 1)	
-		icon_amount = icon_amount + 1
+			local x1 = math.random(windowsPosition.x - 350, windowsPosition.x + 350)
+			local y1 = math.random(windowsPosition.y - 250, windowsPosition.y + 100)
+			local pos = vmath.vector3(x1, y1, 0)
+
+			print(pos)
+
+			local icon = factory.create("#factory", pos, nil, {}, 1)	
+			icon_amount = icon_amount + 1
+		end
 	end	
 end
