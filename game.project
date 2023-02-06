@@ -19,7 +19,11 @@ input_method = HiddenInputField
 
 [project]
 title = CriptoClicker
+developer = Guillem Arrojo, Veronika Bolshakova, Joan Mora, Alejandro Reñones
 
 [graphics]
 max_draw_calls = 8024
+
+[windows]
+app_icon = /assets/sprites/special/dogeCoinNew.ico
 
