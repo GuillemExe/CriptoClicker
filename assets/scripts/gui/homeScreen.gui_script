@@ -23,7 +23,10 @@ function on_message(self, message_id, message, sender)
 			score = score - device_cost
 			print("Comprar ordenador")
 			msg.post("/computers#modifierLabel", "confirm_add_device")
+			--sound.play("music#notificationSound")
 			update_score(self)
+		elseif score < device_cost then
+			--sound.play("music#problematicNotificationSound")
 		end
 	end
 	if message_id == hash("add_server") then
@@ -32,7 +35,10 @@ function on_message(self, message_id, message, sender)
 			score = score - device_cost
 			print("Comprar server")
 			msg.post("/server#modifierLabel", "confirm_add_device")
+			--sound.play("music#notificationSound")
 			update_score(self)
+		elseif score < device_cost then
+			--sound.play("music#problematicNotificationSound")
 		end
 	end
 end
