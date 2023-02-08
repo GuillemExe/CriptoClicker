@@ -25,5 +25,5 @@ developer = Guillem Arrojo, Veronika Bolshakova, Joan Mora, Alejandro Reñones
 max_draw_calls = 8024
 
 [windows]
-app_icon = /assets/sprites/special/dogeCoinNew.ico
+app_icon = /assets/sprites/special/dogeNew.ico
 
