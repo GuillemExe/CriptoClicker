@@ -77,7 +77,7 @@ embedded_components {
   "line_break: false\n"
   "text: \"Add New Server\\n"
   "\"\n"
-  "  \"Cost 10000\"\n"
+  "  \"Cost 1000\"\n"
   "font: \"/assets/font/m5x7.font\"\n"
   "material: \"/builtins/fonts/label.material\"\n"
   ""
